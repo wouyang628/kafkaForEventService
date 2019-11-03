@@ -20,3 +20,17 @@ for message in consumer:
     print(message["error_message"])
     es.index(index='events', body = event1)
     
+"""
+e.g
+event1 = {
+    "timestamp": datetime.now(),
+    "device_ID": "vmx103", 
+    "device_type": "network",
+   "vendor": "Juniper", 
+    "element_name": "ge-0/0/2.0", 
+    "error_code": "interface_down", 
+    "error_message": "ge-0/0/2.0 is down", 
+    "status": "new", 
+    "result": "none"
+}
+"""
