@@ -22,15 +22,18 @@ for message in consumer:
     
 """
 e.g
+timeNow = datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S")
+
 event1 = {
-    "timestamp": datetime.now(),
-    "device_ID": "vmx103", 
+    "timestamp": timeNow,
+    "device_ID": "vmx105",
     "device_type": "network",
-   "vendor": "Juniper", 
-    "element_name": "ge-0/0/2.0", 
-    "error_code": "interface_down", 
-    "error_message": "ge-0/0/2.0 is down", 
-    "status": "new", 
+    "vendor": "Juniper",
+    "element_name": "ge-0/0/2.0",
+    "error_code": "interface_error",
+    "error_message": "ge-0/0/2.0 error",
+    "status": "new",
     "result": "none"
 }
+
 """
