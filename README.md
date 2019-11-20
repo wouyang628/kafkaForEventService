@@ -1,6 +1,12 @@
 # kafkaScalaEventSubscription
 
 To install and set up Kafka , please follow the Kafka quick start guide https://kafka.apache.org/quickstart
+```
+bin/zookeeper-server-start.sh config/zookeeper.properties
+bin/kafka-server-start.sh config/server.properties
+
+```
+
 
 # set up java enviroment
 ```
