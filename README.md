@@ -24,3 +24,14 @@ vi config/server.properties
 
 advertised.listeners=PLAINTEXT://[server_ip]:9092
 ```
+
+# fluentd output to kafka
+
+```
+[root@linux1 ~]# td-agent-gem install fluent-plugin-kafka
+Fetching: fluent-plugin-kafka-0.12.1.gem (100%)
+Successfully installed fluent-plugin-kafka-0.12.1
+Parsing documentation for fluent-plugin-kafka-0.12.1
+Installing ri documentation for fluent-plugin-kafka-0.12.1
+Done installing documentation for fluent-plugin-kafka after 0 seconds
+```
