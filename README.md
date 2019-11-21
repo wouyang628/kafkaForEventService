@@ -1,6 +1,11 @@
 ![highlevel](/images/highlevel.png)
 
-# kafkaScalaEventSubscription
+# set up java enviroment
+```
+yum install java-1.8.0-openjdk
+```
+
+# set up Kafka
 
 To install and set up Kafka , please follow the Kafka quick start guide https://kafka.apache.org/quickstart
 ```
@@ -10,14 +15,6 @@ bin/kafka-server-start.sh config/server.properties
 bin/kafka-console-producer.sh --broker-list localhost:9092 --topic test
 bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test --from-beginning
 ```
-
-
-# set up java enviroment
-```
-yum install java-1.8.0-openjdk
-```
-
-
 in order for remote server to produce to the local kafka broker, the broker ip needs to be advertised by modifying the config/server.properties
 ```
 vi config/server.properties
