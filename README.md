@@ -94,3 +94,6 @@ root@ubuntu:~/kafka_2.12-2.3.0# bin/kafka-console-consumer.sh --bootstrap-server
 {"host":"vmx101","ident":"cscript","message":"RPM_TEST_RESULTS: test-owner=northstar-ifl test-name=ge-0/0/6.0 loss=0 min-rtt=8 max-rtt=14 avgerage-rtt=19.67 jitter=29.2"}
 {"host":"vmx101","ident":"cscript","message":"RPM_TEST_RESULTS: test-owner=northstar-ifl test-name=ge-0/1/1.0 loss=0 min-rtt=67 max-rtt=67 avgerage-rtt=35.5 jitter=77.987"}
 ```
+
+# healthbot output to kafka
+follow https://damianoneill.github.io/healthbot/docs/kafka on how to configure healthbot to send notificatio to kafka
