@@ -97,3 +97,10 @@ root@ubuntu:~/kafka_2.12-2.3.0# bin/kafka-console-consumer.sh --bootstrap-server
 
 # healthbot output to kafka
 follow https://damianoneill.github.io/healthbot/docs/kafka on how to configure healthbot to send notificatio to kafka
+
+manually check if events are received:
+```
+root@ubuntu:~/kafka_2.12-2.3.0# bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic eventService --from-beginning
+
+{"device-id": "vmx101", "group": "group_all", "keys": {"_instance_id": "[\"interface-status\"]", "_playbook_name": "interface-status", "interface-name": "ge-0/1/1"}, "message": "ge-0/1/1 op state UP", "rule": "interface_status", "severity": "normal", "topic": "external", "trigger": "op-down"}
+```
