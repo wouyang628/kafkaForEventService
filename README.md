@@ -101,3 +101,11 @@ root@ubuntu:~/kafka_2.12-2.3.0# bin/kafka-console-consumer.sh --bootstrap-server
 
 {"device-id": "vmx101", "group": "group_all", "keys": {"_instance_id": "[\"interface-status\"]", "_playbook_name": "interface-status", "interface-name": "ge-0/1/1"}, "message": "ge-0/1/1 op state UP", "rule": "interface_status", "severity": "normal", "topic": "external", "trigger": "op-down"}
 ```
+
+# set up Kibana to visualize the data
+
+create Index Pattern
+![KibanaIndexPattern](/images/KibanaIndexPattern.png)
+
+Data Dicovery:
+![kibanaDiscovery](/images/kibanaDiscovery.png)
