@@ -109,3 +109,25 @@ create Index Pattern
 
 Data Dicovery:
 ![kibanaDiscovery](/images/kibanaDiscovery.png)
+
+
+# SMTP
+
+To enable sending email , please configure SNMP following https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-postfix-as-a-send-only-smtp-server-on-ubuntu-16-04
+
+e.g.
+```
+import smtplib
+sender = 'event_service'
+receivers = ['']
+message = """From: From Event Service
+To: To You
+Subject: Event Cannot be handled
+
+Event Cannot be handled.
+Error Information:
+{}
+""".format(event)
+smtpObj = smtplib.SMTP('localhost')
+smtpObj.sendmail(sender, receivers, message)
+```
