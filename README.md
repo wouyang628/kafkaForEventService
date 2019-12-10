@@ -104,23 +104,23 @@ root@ubuntu:~/kafka_2.12-2.3.0# bin/kafka-console-consumer.sh --bootstrap-server
 
 healthbot rule example:
 ```
-set iceberg topic external rule interface_status keys element-name
+set iceberg topic external rule interface_status keys element_name
 set iceberg topic external rule interface_status sensor interface open-config sensor-name /interfaces
 set iceberg topic external rule interface_status sensor interface open-config frequency 30s
 set iceberg topic external rule interface_status field admin-status sensor interface path /interfaces/interface/state/admin-status
 set iceberg topic external rule interface_status field admin-status type string
-set iceberg topic external rule interface_status field element-name sensor interface where "/interfaces/interface/@name =~ /{{interface-name-variable}}/"
-set iceberg topic external rule interface_status field element-name sensor interface path "/interfaces/interface/@name"
-set iceberg topic external rule interface_status field element-name type string
+set iceberg topic external rule interface_status field element_name sensor interface where "/interfaces/interface/@name =~ /{{interface-name-variable}}/"
+set iceberg topic external rule interface_status field element_name sensor interface path "/interfaces/interface/@name"
+set iceberg topic external rule interface_status field element_name type string
 set iceberg topic external rule interface_status field op-status sensor interface path /interfaces/interface/state/oper-status
 set iceberg topic external rule interface_status field op-status type string
 set iceberg topic external rule interface_status trigger interface_down frequency 5s
 set iceberg topic external rule interface_status trigger interface_down term Term_1 when matches-with "$op-status" DOWN
 set iceberg topic external rule interface_status trigger interface_down term Term_1 then status color red
-set iceberg topic external rule interface_status trigger interface_down term Term_1 then status message "$element-name op state DOWN"
+set iceberg topic external rule interface_status trigger interface_down term Term_1 then status message "$element_name op state DOWN"
 set iceberg topic external rule interface_status trigger interface_down term Term_2 when matches-with "$op-status" UP
 set iceberg topic external rule interface_status trigger interface_down term Term_2 then status color green
-set iceberg topic external rule interface_status trigger interface_down term Term_2 then status message "$element-name op state DOWN"
+set iceberg topic external rule interface_status trigger interface_down term Term_2 then status message "$element_name op state DOWN"
 set iceberg topic external rule interface_status variable interface-name-variable value ge.*
 set iceberg topic external rule interface_status variable interface-name-variable type string
 ```
